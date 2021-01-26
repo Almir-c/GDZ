@@ -12,9 +12,16 @@ namespace WindowsFormsApp3
 {
     public partial class FormFisica : Form
     {
-        public FormFisica()
+        public FormFisica(string predmet, string picAdress)
         {
             InitializeComponent();
+            pictureBox1.Load("../../Resources/" + picAdress + ".jpg");
+            pictureBox2.Load("../../Resources/" + picAdress + " - темы.jpg");
+        }
+
+        private void FormFisica_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

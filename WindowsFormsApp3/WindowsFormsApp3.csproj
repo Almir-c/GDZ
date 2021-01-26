@@ -52,11 +52,11 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlgebraForm.cs">
+    <Compile Include="PredmetForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AlgebraForm.Designer.cs">
-      <DependentUpon>AlgebraForm.cs</DependentUpon>
+    <Compile Include="PredmetForm.Designer.cs">
+      <DependentUpon>PredmetForm.cs</DependentUpon>
     </Compile>
     <Compile Include="FormFisica.cs">
       <SubType>Form</SubType>
@@ -66,8 +66,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AlgebraForm.resx">
-      <DependentUpon>AlgebraForm.cs</DependentUpon>
+    <EmbeddedResource Include="FormFisica.resx">
+      <DependentUpon>FormFisica.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PredmetForm.resx">
+      <DependentUpon>PredmetForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

@@ -54,7 +54,7 @@ namespace WindowsFormsApp3
             this.radioButtonAlgebra.AutoSize = true;
             this.radioButtonAlgebra.Location = new System.Drawing.Point(635, 27);
             this.radioButtonAlgebra.Name = "radioButtonAlgebra";
-            this.radioButtonAlgebra.Size = new System.Drawing.Size(83, 21);
+            this.radioButtonAlgebra.Size = new System.Drawing.Size(81, 20);
             this.radioButtonAlgebra.TabIndex = 1;
             this.radioButtonAlgebra.TabStop = true;
             this.radioButtonAlgebra.Text = "Алгебра";
@@ -65,7 +65,7 @@ namespace WindowsFormsApp3
             this.radioButton2.AutoSize = true;
             this.radioButton2.Location = new System.Drawing.Point(635, 54);
             this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(80, 21);
+            this.radioButton2.Size = new System.Drawing.Size(76, 20);
             this.radioButton2.TabIndex = 2;
             this.radioButton2.TabStop = true;
             this.radioButton2.Text = "Физика";
@@ -76,7 +76,7 @@ namespace WindowsFormsApp3
             this.radioButton3.AutoSize = true;
             this.radioButton3.Location = new System.Drawing.Point(635, 81);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(118, 21);
+            this.radioButton3.Size = new System.Drawing.Size(114, 20);
             this.radioButton3.TabIndex = 3;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Русский язык";
@@ -87,7 +87,7 @@ namespace WindowsFormsApp3
             this.radioButton4.AutoSize = true;
             this.radioButton4.Location = new System.Drawing.Point(635, 108);
             this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(101, 21);
+            this.radioButton4.Size = new System.Drawing.Size(96, 20);
             this.radioButton4.TabIndex = 4;
             this.radioButton4.TabStop = true;
             this.radioButton4.Text = "Геометрия";
@@ -98,7 +98,7 @@ namespace WindowsFormsApp3
             this.radioButton5.AutoSize = true;
             this.radioButton5.Location = new System.Drawing.Point(635, 135);
             this.radioButton5.Name = "radioButton5";
-            this.radioButton5.Size = new System.Drawing.Size(141, 21);
+            this.radioButton5.Size = new System.Drawing.Size(137, 20);
             this.radioButton5.TabIndex = 5;
             this.radioButton5.TabStop = true;
             this.radioButton5.Text = "Английский язык";

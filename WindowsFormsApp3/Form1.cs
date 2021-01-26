@@ -21,7 +21,17 @@ namespace WindowsFormsApp3
         {
             if (radioButtonAlgebra.Checked)
             {
-                AlgebraForm f = new AlgebraForm();
+                PredmetForm f = new PredmetForm("Алгебра");
+                f.Show();
+            }
+            if (radioButton2.Checked)
+            {
+                PredmetForm f = new PredmetForm("Физика");
+                f.Show();
+            }
+            if (radioButton3.Checked)
+            {
+                PredmetForm f = new PredmetForm("Русский язык");
                 f.Show();
             }
 
