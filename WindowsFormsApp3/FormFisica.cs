@@ -15,11 +15,16 @@ namespace WindowsFormsApp3
         public FormFisica(string predmet, string picAdress)
         {
             InitializeComponent();
-            pictureBox1.Load("../../Resources/" + picAdress + ".jpg");
-            pictureBox2.Load("../../Resources/" + picAdress + " - темы.jpg");
+            pictureBox1.Load("../../Resources/" + picAdress + ".png");
+            pictureBox2.Load("../../Resources/" + picAdress + " - темы.png");
         }
 
         private void FormFisica_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

@@ -39,7 +39,6 @@ namespace WindowsFormsApp3
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Image = global::WindowsFormsApp3.Properties.Resources.Вор;
             this.pictureBox1.Location = new System.Drawing.Point(12, 136);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(195, 302);
@@ -52,9 +51,9 @@ namespace WindowsFormsApp3
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label1.Location = new System.Drawing.Point(12, 122);
+            this.label1.Location = new System.Drawing.Point(9, 116);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(180, 13);
+            this.label1.Size = new System.Drawing.Size(223, 17);
             this.label1.TabIndex = 2;
             this.label1.Text = "ГДЗ ПО АЛГЕБРЕ СТЫРИЛИ";
             // 

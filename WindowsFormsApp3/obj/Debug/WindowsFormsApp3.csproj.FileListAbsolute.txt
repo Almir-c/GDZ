@@ -9,3 +9,15 @@ C:\Users\user\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFo
 C:\Users\user\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\user\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
 C:\Users\user\source\repos\WindowsFormsApp3\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.AlgebraForm.resources
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csprojAssemblyReference.cache
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormFisica.resources
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.PredmetForm.resources
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.GenerateResource.cache
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\user\Downloads\GDZ-main\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.csproj.CoreCompileInputs.cache

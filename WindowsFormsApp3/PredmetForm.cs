@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,23 +19,13 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
-            if (predmet == "Алгебра")
-            {
-                label1.Text = "Гдз по алгебре стырили";
-                pictureBox1.Load("../../Resources/Вор.png");
-            }
-
-            if (predmet == "Физика")
-            {
-                label1.Text = "Остальные ответы на номера в других учебниках \n можно плоучить за 100 рублей";
-                pictureBox1.Load("../../Resources/фызика.jpg");
-            }
+            label1.Text = File.ReadAllText("../../Resources/" + predmet + ".txt");
+            pictureBox1.Load("../../Resources/" + predmet + ".png");
 
             if (predmet == "Русский язык")
             {
                 label1.Text = "Выберите учебник";
-                pictureBox1.Load("../../Resources/русский1.jpg");
-                pictureBox2.Load("../../Resources/русский2.jpg");
+                pictureBox2.Load("../../Resources/русский2.png");
             }
         }
 
