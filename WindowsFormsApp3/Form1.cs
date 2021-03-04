@@ -17,51 +17,52 @@ namespace WindowsFormsApp3
         public PictureBox soderzanie2;
         public string Author;
         public int YourIq; 
+
+        public Uchebniki(string _Author, int _YourIq)
+        {
+            Author = _Author;
+            YourIq = _YourIq;
+            oblojka = new PictureBox();
+            soderzanie = new PictureBox();
+            soderzanie2 = new PictureBox();
+        }
     }
 
     public partial class Form1 : Form
     {
-        Uchebniki[] spisok = new Uchebniki[300];
+        List<Uchebniki> spisok = new List<Uchebniki>();
+        //Uchebniki[] spisok = new Uchebniki[300];
         public Form1()
         {
             InitializeComponent();
 
-            spisok[0].Author = "Петушков";
-            spisok[0].YourIq = 0;
-
-            spisok[1].Author = "Абрамов";
-            spisok[1].YourIq = -1;
+            spisok.Add(new Uchebniki ("Петушков", 0));
             
-
-            spisok[2].Author = "Машкова";
-            spisok[2].YourIq = 100;
-
-            spisok[2].Author = "Владимиров";
-            spisok[2].YourIq = 50;
-
-            spisok[2].Author = "Anonim";
-            spisok[2].YourIq = 1000;
-
-            spisok[2].Author = "Верблюдов";
-            spisok[2].YourIq = 25;
-
+            spisok.Add(new Uchebniki("Абрамов", -1));
+            spisok.Add(new Uchebniki("Машкова", 100));
+            spisok.Add(new Uchebniki("Владимиров", 50));
+            spisok.Add(new Uchebniki("Anonim", 1000));
+            spisok.Add(new Uchebniki("Верблюдов", 25));
+            
             int x = 10;
             int y = 20;
-            for (int i = 0; i < 8; i++)
+            for (int i = 0; i < spisok.Count; i++)
             {
-                spisok[i].oblojka = new PictureBox();
-                spisok[i].soderzanie = new PictureBox();
-                spisok[i].soderzanie2 = new PictureBox();
-
                 try
                 {
                     spisok[i].oblojka.Load("../../Resources/" + spisok[i].Author + ".jpg");
+                }
+                catch (Exception)
+                {
+                    spisok[i].oblojka.Load("../../Resources/какава.png");
+                }                                                                                          
+                try
+                {
                     spisok[i].soderzanie.Load("../../Resources/" + spisok[i].Author + " (2).jpg");
                     spisok[i].soderzanie2.Load("../../Resources/" + spisok[i].Author + " (3).jpg");
                 }
                 catch (Exception)
                 {
-                    spisok[i].oblojka.Load("../../Resources/какава.png");
                     spisok[i].soderzanie.Load("../../Resources/какава.png");
                 }
 
@@ -127,7 +128,7 @@ namespace WindowsFormsApp3
 
         private void buttonForm1_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 3; i++) 
+            for (int i = 0; i < spisok.Count; i++) 
             {
                 spisok[i].oblojka.Visible = true;
                 spisok[i].soderzanie.Visible = true;

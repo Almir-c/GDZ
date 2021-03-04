@@ -21,11 +21,19 @@ namespace WindowsFormsApp3
 
             label1.Text = File.ReadAllText("../../Resources/" + predmet + ".txt");
             pictureBox1.Load("../../Resources/" + predmet + ".png");
+            pictureBox1.Tag = predmet;
 
             if (predmet == "Русский язык")
             {
                 label1.Text = "Выберите учебник";
                 pictureBox2.Load("../../Resources/русский2.png");
+                pictureBox2.Tag = "русский2";
+            }
+            if (predmet == "Физика")
+            {
+                label1.Text = "Выберите учебник";
+                pictureBox2.Load("../../Resources/Физика.png");
+                pictureBox2.Tag = "Физика";
             }
         }
 
@@ -41,18 +49,18 @@ namespace WindowsFormsApp3
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (predmet == "Русский язык")
+            //if (predmet == "Русский язык")
             {
-                FormFisica fisica2 = new FormFisica("Русский язык", "русский2");
+                FormFisica fisica2 = new FormFisica(predmet, pictureBox2.Tag.ToString());
                 fisica2.Show();
             }
         }
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            if (predmet == "Русский язык")
+            //if (predmet == "Русский язык")
             {
-                FormFisica fisica = new FormFisica("Русский язык", "русский1");
+                FormFisica fisica = new FormFisica(predmet, pictureBox1.Tag.ToString());
                 fisica.Show();
             }
         }
