@@ -26,8 +26,10 @@ namespace WindowsFormsApp3
             if (predmet == "Русский язык")
             {
                 label1.Text = "Выберите учебник";
-                pictureBox2.Load("../../Resources/русский2.png");
-                pictureBox2.Tag = "русский2";
+                pictureBox1.Load("../../Resources/Русский язык/4 класс Каленчук - обложка.jpg");
+                pictureBox1.Tag = "4 класс Каленчук";
+                pictureBox2.Load("../../Resources/Русский язык/7 класс Машкова - обложка.png");
+                pictureBox2.Tag = "7 класс Машкова";
             }
             if (predmet == "Физика")
             {
@@ -51,7 +53,7 @@ namespace WindowsFormsApp3
         {
             //if (predmet == "Русский язык")
             {
-                FormFisica fisica2 = new FormFisica(predmet, pictureBox2.Tag.ToString());
+                UchebnikForm fisica2 = new UchebnikForm(predmet, pictureBox2.Tag.ToString());
                 fisica2.Show();
             }
         }
@@ -60,9 +62,14 @@ namespace WindowsFormsApp3
         {
             //if (predmet == "Русский язык")
             {
-                FormFisica fisica = new FormFisica(predmet, pictureBox1.Tag.ToString());
+                UchebnikForm fisica = new UchebnikForm(predmet, pictureBox1.Tag.ToString());
                 fisica.Show();
             }
+        }
+
+        private void PredmetForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -141,5 +141,10 @@ namespace WindowsFormsApp3
                 }
             }
         }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+            
+        }
     }
 }

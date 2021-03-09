@@ -87,7 +87,8 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.Name = "PredmetForm";
-            this.Text = "Алгебра";
+            this.Text = "Учебник";
+            this.Load += new System.EventHandler(this.PredmetForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
