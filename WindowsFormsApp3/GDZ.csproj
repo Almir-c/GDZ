@@ -66,6 +66,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Zakladka.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zakladka.Designer.cs">
+      <DependentUpon>Zakladka.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="UchebnikForm.resx">
       <DependentUpon>UchebnikForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -103,6 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Вор.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\heart2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

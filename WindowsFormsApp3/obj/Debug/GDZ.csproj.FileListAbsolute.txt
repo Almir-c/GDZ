@@ -9,3 +9,15 @@ C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csprojAssemblyReference.cache
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.UchebnikForm.resources
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.PredmetForm.resources
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.GenerateResource.cache
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.CoreCompileInputs.cache
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+C:\Users\beavi\Desktop\Новая папка\GDZ\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb

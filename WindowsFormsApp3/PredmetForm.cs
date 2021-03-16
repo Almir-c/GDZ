@@ -19,11 +19,11 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
-            label1.Text = File.ReadAllText("../../Resources/" + predmet + ".txt");
-            pictureBox1.Load("../../Resources/" + predmet + ".png");
+            label1.Text = File.ReadAllText("../../Resources/" + predmet1 + ".txt");
+            pictureBox1.Load("../../Resources/" + predmet1 + ".png");
             pictureBox1.Tag = predmet;
 
-            if (predmet == "Русский язык")
+            if (predmet1 == "Русский язык")
             {
                 label1.Text = "Выберите учебник";
                 pictureBox1.Load("../../Resources/Русский язык/4 класс Каленчук - обложка.jpg");
@@ -31,7 +31,7 @@ namespace WindowsFormsApp3
                 pictureBox2.Load("../../Resources/Русский язык/7 класс Машкова - обложка.png");
                 pictureBox2.Tag = "7 класс Машкова";
             }
-            if (predmet == "Физика")
+            if (predmet1 == "Физика")
             {
                 label1.Text = "Выберите учебник";
                 pictureBox2.Load("../../Resources/Физика.png");
@@ -69,6 +69,12 @@ namespace WindowsFormsApp3
 
         private void PredmetForm_Load(object sender, EventArgs e)
         {
+
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            //Form1.zakladka.Add(like);
 
         }
     }

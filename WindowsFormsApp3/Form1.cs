@@ -16,47 +16,55 @@ namespace WindowsFormsApp3
         public PictureBox soderzanie;
         public PictureBox soderzanie2;
         public string Author;
+        public string discipline;
+        public int schoolClass;
         public int YourIq; 
 
-        public Uchebniki(string _Author, int _YourIq)
+        public Uchebniki(string _Author, int _YourIq, string _discipline, int _schoolClass)
         {
             Author = _Author;
             YourIq = _YourIq;
             oblojka = new PictureBox();
             soderzanie = new PictureBox();
             soderzanie2 = new PictureBox();
+            discipline = _discipline;
+            schoolClass = _schoolClass;
         }
     }
 
     public partial class Form1 : Form
     {
-        List<Uchebniki> spisok = new List<Uchebniki>();
+        public static List<Uchebniki> spisok = new List<Uchebniki>();
+
+        public static List<Uchebniki> zakladka = new List<Uchebniki>();
         //Uchebniki[] spisok = new Uchebniki[300];
         public Form1()
         {
             InitializeComponent();
 
-            spisok.Add(new Uchebniki ("Петушков", 0));
-            
+            spisok.Add(new Uchebniki("Перышкин", 0, "Физика", 7));
+            spisok.Add(new Uchebniki("Машкова", 0, "Русский язык", 7));
+            spisok.Add(new Uchebniki("Каленчук", 0, "Русский язык", 4));
+            /*
             spisok.Add(new Uchebniki("Абрамов", -1));
             spisok.Add(new Uchebniki("Машкова", 100));
             spisok.Add(new Uchebniki("Владимиров", 50));
             spisok.Add(new Uchebniki("Anonim", 1000));
             spisok.Add(new Uchebniki("Верблюдов", 25));
-            
+            */
             int x = 10;
             int y = 20;
-            for (int i = 0; i < spisok.Count; i++)
+            foreach (Uchebniki uch in spisok)
             {
                 try
                 {
-                    spisok[i].oblojka.Load("../../Resources/" + spisok[i].Author + ".jpg");
+                    uch.oblojka.Load("../../Resources/" + uch.discipline + "/" + uch.schoolClass.ToString() + " класс " + uch.Author + " - обложка.jpg");
                 }
                 catch (Exception)
                 {
-                    spisok[i].oblojka.Load("../../Resources/какава.png");
-                }                                                                                          
-                try
+                    uch.oblojka.Load("../../Resources/какава.png");
+                }
+                /*try
                 {
                     spisok[i].soderzanie.Load("../../Resources/" + spisok[i].Author + " (2).jpg");
                     spisok[i].soderzanie2.Load("../../Resources/" + spisok[i].Author + " (3).jpg");
@@ -64,12 +72,12 @@ namespace WindowsFormsApp3
                 catch (Exception)
                 {
                     spisok[i].soderzanie.Load("../../Resources/какава.png");
-                }
+                }*/
 
-                spisok[i].oblojka.Location = new Point(x, 10);
-                spisok[i].oblojka.Size = new Size(120, 138);
-                spisok[i].oblojka.SizeMode = PictureBoxSizeMode.Zoom;
-
+                uch.oblojka.Location = new Point(x, 10);
+                uch.oblojka.Size = new Size(120, 138);
+                uch.oblojka.SizeMode = PictureBoxSizeMode.Zoom;
+                /*
                 spisok[i].soderzanie.Location = new Point(x, 150);
                 spisok[i].soderzanie.Size = new Size(120, 138);
                 spisok[i].soderzanie.SizeMode = PictureBoxSizeMode.Zoom;
@@ -77,10 +85,10 @@ namespace WindowsFormsApp3
                 spisok[i].soderzanie2.Location = new Point(x, 150);
                 spisok[i].soderzanie2.Size = new Size(120, 138);
                 spisok[i].soderzanie2.SizeMode = PictureBoxSizeMode.Zoom;
-
-                panel1.Controls.Add(spisok[i].oblojka);
-                panel1.Controls.Add(spisok[i].soderzanie);
-                panel1.Controls.Add(spisok[i].soderzanie2);
+                */
+                panel1.Controls.Add(uch.oblojka);
+                //panel1.Controls.Add(spisok[i].soderzanie);
+                //panel1.Controls.Add(spisok[i].soderzanie2);
 
                 x = x + 150;
                 if (x  + 120 > Width)
