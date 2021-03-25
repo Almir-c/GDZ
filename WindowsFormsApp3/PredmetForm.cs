@@ -19,24 +19,37 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
-            label1.Text = File.ReadAllText("../../Resources/" + predmet1 + ".txt");
+        
+
+            int x = 10;
+
+            //Бегаем по всем учебникам
+            foreach (Uchebniki uch in Form1.spisok)
+            {
+                //Если предмет норм
+                if (uch.discipline == predmet)
+                {
+                    //Добавляем картинку
+                    PictureBox oblojka = new PictureBox();
+                    oblojka.Image = uch.oblojka.Image;
+                    oblojka.Location = new Point(x, 150);
+                    oblojka.Size = new Size(120, 138);
+                    oblojka.SizeMode = PictureBoxSizeMode.Zoom;
+                    oblojka.Click += new EventHandler(OpenUchebnik);
+                    Controls.Add(oblojka);
+                    x = x + 150;
+                    if (x + 120 > Width)
+                    {
+                        //y = y + 180;
+                        //x = 10;
+                    }
+                }
+            }
+
+            /*label1.Text = File.ReadAllText("../../Resources/" + predmet1 + ".txt");
             pictureBox1.Load("../../Resources/" + predmet1 + ".png");
             pictureBox1.Tag = predmet;
-
-            if (predmet1 == "Русский язык")
-            {
-                label1.Text = "Выберите учебник";
-                pictureBox1.Load("../../Resources/Русский язык/4 класс Каленчук - обложка.jpg");
-                pictureBox1.Tag = "4 класс Каленчук";
-                pictureBox2.Load("../../Resources/Русский язык/7 класс Машкова - обложка.png");
-                pictureBox2.Tag = "7 класс Машкова";
-            }
-            if (predmet1 == "Физика")
-            {
-                label1.Text = "Выберите учебник";
-                pictureBox2.Load("../../Resources/Физика.png");
-                pictureBox2.Tag = "Физика";
-            }
+            */
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -49,12 +62,21 @@ namespace WindowsFormsApp3
             Close();
         }
 
-        private void pictureBox2_Click(object sender, EventArgs e)
+        /// <summary>
+        /// Открываем учебник
+        /// </summary>
+        public static void OpenUchebnik(object sender, EventArgs e)
         {
-            //if (predmet == "Русский язык")
+            foreach (Uchebniki uch in Form1.spisok)
             {
-                UchebnikForm fisica2 = new UchebnikForm(predmet, pictureBox2.Tag.ToString());
-                fisica2.Show();
+                /// Ищем нужный учебник
+                if (((PictureBox)sender).Image == uch.oblojka.Image)
+                {
+
+                    UchebnikForm fisica2 = new UchebnikForm(uch.discipline, uch.schoolClass.ToString(), uch.Author);
+                    fisica2.Show();
+                    break;
+                }                
             }
         }
 
@@ -62,8 +84,8 @@ namespace WindowsFormsApp3
         {
             //if (predmet == "Русский язык")
             {
-                UchebnikForm fisica = new UchebnikForm(predmet, pictureBox1.Tag.ToString());
-                fisica.Show();
+                //UchebnikForm fisica = new UchebnikForm(predmet, pictureBox1.Tag.ToString());
+                //fisica.Show();
             }
         }
 

@@ -29,7 +29,6 @@ namespace WindowsFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.radioButtonAlgebra = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -39,23 +38,17 @@ namespace WindowsFormsApp3
             this.textBoxForm1 = new System.Windows.Forms.TextBox();
             this.buttonForm1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.radioButtonMeme = new System.Windows.Forms.RadioButton();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(629, 248);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // radioButtonAlgebra
             // 
             this.radioButtonAlgebra.AutoSize = true;
-            this.radioButtonAlgebra.Location = new System.Drawing.Point(635, 27);
+            this.radioButtonAlgebra.Location = new System.Drawing.Point(635, 50);
             this.radioButtonAlgebra.Name = "radioButtonAlgebra";
             this.radioButtonAlgebra.Size = new System.Drawing.Size(83, 21);
             this.radioButtonAlgebra.TabIndex = 1;
@@ -66,7 +59,7 @@ namespace WindowsFormsApp3
             // radioButton2
             // 
             this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(635, 54);
+            this.radioButton2.Location = new System.Drawing.Point(635, 77);
             this.radioButton2.Name = "radioButton2";
             this.radioButton2.Size = new System.Drawing.Size(80, 21);
             this.radioButton2.TabIndex = 2;
@@ -77,7 +70,7 @@ namespace WindowsFormsApp3
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(635, 81);
+            this.radioButton3.Location = new System.Drawing.Point(635, 104);
             this.radioButton3.Name = "radioButton3";
             this.radioButton3.Size = new System.Drawing.Size(118, 21);
             this.radioButton3.TabIndex = 3;
@@ -88,7 +81,7 @@ namespace WindowsFormsApp3
             // radioButton4
             // 
             this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(635, 108);
+            this.radioButton4.Location = new System.Drawing.Point(635, 131);
             this.radioButton4.Name = "radioButton4";
             this.radioButton4.Size = new System.Drawing.Size(101, 21);
             this.radioButton4.TabIndex = 4;
@@ -99,7 +92,7 @@ namespace WindowsFormsApp3
             // radioButton5
             // 
             this.radioButton5.AutoSize = true;
-            this.radioButton5.Location = new System.Drawing.Point(635, 135);
+            this.radioButton5.Location = new System.Drawing.Point(635, 158);
             this.radioButton5.Name = "radioButton5";
             this.radioButton5.Size = new System.Drawing.Size(141, 21);
             this.radioButton5.TabIndex = 5;
@@ -110,7 +103,7 @@ namespace WindowsFormsApp3
             // button1
             // 
             this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.Location = new System.Drawing.Point(638, 176);
+            this.button1.Location = new System.Drawing.Point(638, 199);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(138, 43);
             this.button1.TabIndex = 6;
@@ -145,12 +138,46 @@ namespace WindowsFormsApp3
             this.panel1.TabIndex = 11;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // radioButtonMeme
+            // 
+            this.radioButtonMeme.AutoSize = true;
+            this.radioButtonMeme.Location = new System.Drawing.Point(635, 23);
+            this.radioButtonMeme.Name = "radioButtonMeme";
+            this.radioButtonMeme.Size = new System.Drawing.Size(102, 21);
+            this.radioButtonMeme.TabIndex = 12;
+            this.radioButtonMeme.TabStop = true;
+            this.radioButtonMeme.Text = "Мемология";
+            this.radioButtonMeme.UseVisualStyleBackColor = true;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::WindowsFormsApp3.Properties.Resources.heart2;
+            this.pictureBox2.Location = new System.Drawing.Point(819, 12);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(75, 50);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox2.TabIndex = 13;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Location = new System.Drawing.Point(0, -2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(629, 248);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(906, 539);
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.radioButtonMeme);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonForm1);
             this.Controls.Add(this.textBoxForm1);
@@ -165,6 +192,7 @@ namespace WindowsFormsApp3
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -183,6 +211,8 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.TextBox textBoxForm1;
         private System.Windows.Forms.Button buttonForm1;
         private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.RadioButton radioButtonMeme;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }
 

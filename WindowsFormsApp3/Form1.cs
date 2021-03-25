@@ -34,6 +34,9 @@ namespace WindowsFormsApp3
 
     public partial class Form1 : Form
     {
+        /// <summary>
+        /// Все учебники
+        /// </summary>
         public static List<Uchebniki> spisok = new List<Uchebniki>();
 
         public static List<Uchebniki> zakladka = new List<Uchebniki>();
@@ -45,6 +48,9 @@ namespace WindowsFormsApp3
             spisok.Add(new Uchebniki("Перышкин", 0, "Физика", 7));
             spisok.Add(new Uchebniki("Машкова", 0, "Русский язык", 7));
             spisok.Add(new Uchebniki("Каленчук", 0, "Русский язык", 4));
+            spisok.Add(new Uchebniki("Гав", 0, "Мемология", 7));
+            spisok.Add(new Uchebniki("Мур", 0, "Мемология", 7));
+            spisok.Add(new Uchebniki("Виктор", 0, "Мемология", 7));
             /*
             spisok.Add(new Uchebniki("Абрамов", -1));
             spisok.Add(new Uchebniki("Машкова", 100));
@@ -74,7 +80,7 @@ namespace WindowsFormsApp3
                     spisok[i].soderzanie.Load("../../Resources/какава.png");
                 }*/
 
-                uch.oblojka.Location = new Point(x, 10);
+                uch.oblojka.Location = new Point(x, y);
                 uch.oblojka.Size = new Size(120, 138);
                 uch.oblojka.SizeMode = PictureBoxSizeMode.Zoom;
                 /*
@@ -101,6 +107,11 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
+            if (radioButtonMeme.Checked)
+            {
+                PredmetForm f = new PredmetForm("Мемология");
+                f.Show();
+            }
             if (radioButtonAlgebra.Checked)
             {
                 PredmetForm f = new PredmetForm("Алгебра");
@@ -153,6 +164,11 @@ namespace WindowsFormsApp3
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
             
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            new Zakladka().Show();
         }
     }
 }

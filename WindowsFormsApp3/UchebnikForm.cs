@@ -12,20 +12,35 @@ namespace WindowsFormsApp3
 {
     public partial class UchebnikForm : Form
     {
-        public UchebnikForm(string predmet, string picAdress)
+        Uchebniki uch;
+        public UchebnikForm(string predmet, string schoolClass, string author)
         {
             InitializeComponent();
+
+
+            foreach (Uchebniki uch1 in Form1.spisok)
+            {
+                /// Ищем нужный учебник
+                if (predmet == uch1.discipline &&
+                    author == uch1.Author)
+                {
+                    uch = uch1;
+                    break;
+                }
+            }
+
+
             try
             {
-                pictureBox1.Load("../../Resources/" + predmet + "/" + picAdress + " - обложка.png");
-                pictureBox2.Load("../../Resources/" + predmet + "/" + picAdress + " - темы.png");
+                pictureBox1.Load("../../Resources/" + predmet + "/" + schoolClass + " класс " + author + " - обложка.png");
+                pictureBox2.Load("../../Resources/" + predmet + "/" + schoolClass + " класс " + author + " - темы.png");
             }
             catch (Exception)
             {
                 try
                 {
-                    pictureBox1.Load("../../Resources/" + predmet + "/" + picAdress + " - обложка.jpg");
-                    pictureBox2.Load("../../Resources/" + predmet + "/" + picAdress + " - темы.jpg");
+                    pictureBox1.Load("../../Resources/" + predmet + "/" + schoolClass + " класс " + author + " - обложка.jpg");
+                    pictureBox2.Load("../../Resources/" + predmet + "/" + schoolClass + " класс " + author + " - темы.jpg");
                 }
                 catch (Exception)
                 {
@@ -47,6 +62,12 @@ namespace WindowsFormsApp3
         private void pictureBox2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            Form1.zakladka.Add(uch);
+            MessageBox.Show("Ha! You gay!");
         }
     }
 }
