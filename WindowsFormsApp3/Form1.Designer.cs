@@ -41,6 +41,9 @@ namespace WindowsFormsApp3
             this.radioButtonMeme = new System.Windows.Forms.RadioButton();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.RuButton = new System.Windows.Forms.Button();
+            this.EnButton = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -170,12 +173,48 @@ namespace WindowsFormsApp3
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button2.Location = new System.Drawing.Point(794, 199);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(100, 43);
+            this.button2.TabIndex = 14;
+            this.button2.Text = "Темная тема";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // RuButton
+            // 
+            this.RuButton.BackColor = System.Drawing.SystemColors.Control;
+            this.RuButton.Location = new System.Drawing.Point(782, 495);
+            this.RuButton.Name = "RuButton";
+            this.RuButton.Size = new System.Drawing.Size(44, 32);
+            this.RuButton.TabIndex = 15;
+            this.RuButton.Text = "Ru";
+            this.RuButton.UseVisualStyleBackColor = false;
+            this.RuButton.Click += new System.EventHandler(this.RuButton_Click);
+            // 
+            // EnButton
+            // 
+            this.EnButton.BackColor = System.Drawing.SystemColors.Control;
+            this.EnButton.Location = new System.Drawing.Point(845, 495);
+            this.EnButton.Name = "EnButton";
+            this.EnButton.Size = new System.Drawing.Size(49, 32);
+            this.EnButton.TabIndex = 16;
+            this.EnButton.Text = "En";
+            this.EnButton.UseVisualStyleBackColor = false;
+            this.EnButton.Click += new System.EventHandler(this.EnButton_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(906, 539);
+            this.Controls.Add(this.EnButton);
+            this.Controls.Add(this.RuButton);
+            this.Controls.Add(this.button2);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.radioButtonMeme);
             this.Controls.Add(this.panel1);
@@ -213,6 +252,9 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.RadioButton radioButtonMeme;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button RuButton;
+        private System.Windows.Forms.Button EnButton;
     }
 }
 

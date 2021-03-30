@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp3
 {
+   
     public struct Uchebniki
     {
         public PictureBox oblojka;
@@ -34,6 +35,10 @@ namespace WindowsFormsApp3
 
     public partial class Form1 : Form
     {
+        public static bool IsDarkTheme = false;
+
+        
+
         /// <summary>
         /// Все учебники
         /// </summary>
@@ -43,7 +48,22 @@ namespace WindowsFormsApp3
         //Uchebniki[] spisok = new Uchebniki[300];
         public Form1()
         {
+
             InitializeComponent();
+
+
+            IsDarkTheme = Properties.Settings.Default.IsDarkTheme;
+            ApplyTheme();
+
+
+            EngWords.Add("Темная тема", "Dark theme");
+            EngWords.Add("Я выбрал предмет!", "I chose a lesson!");
+
+            RusWords.Add("Темная тема", "Темная тема");
+            RusWords.Add("Я выбрал предмет!", "Я выбрал предмет!");
+
+
+
 
             spisok.Add(new Uchebniki("Перышкин", 0, "Физика", 7));
             spisok.Add(new Uchebniki("Машкова", 0, "Русский язык", 7));
@@ -65,6 +85,18 @@ namespace WindowsFormsApp3
                 try
                 {
                     uch.oblojka.Load("../../Resources/" + uch.discipline + "/" + uch.schoolClass.ToString() + " класс " + uch.Author + " - обложка.jpg");
+
+                    uch.oblojka.Location = new Point(x, y);
+                    uch.oblojka.Size = new Size(120, 138);
+                    uch.oblojka.SizeMode = PictureBoxSizeMode.Zoom;
+
+                    panel1.Controls.Add(uch.oblojka);
+                    x = x + 150;
+                    if (x + 120 > Width)
+                    {
+                        y = y + 180;
+                        x = 10;
+                    }
                 }
                 catch (Exception)
                 {
@@ -80,9 +112,6 @@ namespace WindowsFormsApp3
                     spisok[i].soderzanie.Load("../../Resources/какава.png");
                 }*/
 
-                uch.oblojka.Location = new Point(x, y);
-                uch.oblojka.Size = new Size(120, 138);
-                uch.oblojka.SizeMode = PictureBoxSizeMode.Zoom;
                 /*
                 spisok[i].soderzanie.Location = new Point(x, 150);
                 spisok[i].soderzanie.Size = new Size(120, 138);
@@ -92,16 +121,80 @@ namespace WindowsFormsApp3
                 spisok[i].soderzanie2.Size = new Size(120, 138);
                 spisok[i].soderzanie2.SizeMode = PictureBoxSizeMode.Zoom;
                 */
-                panel1.Controls.Add(uch.oblojka);
                 //panel1.Controls.Add(spisok[i].soderzanie);
                 //panel1.Controls.Add(spisok[i].soderzanie2);
 
-                x = x + 150;
-                if (x  + 120 > Width)
-                {
-                    y = y + 180;
-                    x = 10;
-                }
+            }
+        }
+
+        public static Dictionary<string, string> EngWords = new Dictionary<string, string>();
+        public static Dictionary<string, string> RusWords = new Dictionary<string, string>();
+
+        void translate(Dictionary<string, string> Words)
+        {
+            button1.Text = Words["Я выбрал предмет!"];
+            button2.Text = Words["Темная тема"];
+        }
+        private void RuButton_Click(object sender, EventArgs e)
+        {
+             translate(RusWords);
+        }
+        
+        private void EnButton_Click_1(object sender, EventArgs e)
+        {
+             translate(EngWords);
+        }
+
+
+        /*
+         Пример перевода для других классов:
+
+        void translate(Dictionary<string, string> Words)
+        {
+            button1.Text = Words["Поиск тем"];
+            Text = Words["Поиск тем"];
+        }
+
+        public AllThemes()
+        {
+            InitializeComponent();
+
+            if (MainForm.Language == "Английский")
+                translate(MainForm.EngWords);
+            if (MainForm.Language == "Русский")
+                translate(MainForm.RusWords);
+        }
+         
+          
+         */
+
+
+
+
+
+
+
+        void ApplyTheme()
+        {
+            if (IsDarkTheme)
+            {
+                button1.BackColor = Color.FromArgb(45, 45, 48);
+                button2.BackColor = Color.FromArgb(45, 45, 48);
+                buttonForm1.BackColor = Color.FromArgb(45, 45, 48);
+              
+                BackColor = Color.FromArgb(45, 45, 48);
+                ForeColor = Color.FromArgb(255, 255, 255);
+                button2.Text = "Светлая тема";
+            }
+            else
+            {
+                button1.BackColor = Color.FromArgb(255, 255, 255);
+                button2.BackColor = Color.FromArgb(255, 255, 255);
+                buttonForm1.BackColor = Color.FromArgb(255, 255, 255);
+               
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+                button2.Text = "Темная тема";
             }
         }
 
@@ -170,5 +263,14 @@ namespace WindowsFormsApp3
         {
             new Zakladka().Show();
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IsDarkTheme = !IsDarkTheme;
+            ApplyTheme();
+        }
     }
 }
+
+
+
