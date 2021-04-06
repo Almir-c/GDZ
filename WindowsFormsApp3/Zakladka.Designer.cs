@@ -37,6 +37,7 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "Zakladka";
             this.Text = "Выбранные учебники";
+            this.Load += new System.EventHandler(this.Zakladka_Load);
             this.ResumeLayout(false);
 
         }

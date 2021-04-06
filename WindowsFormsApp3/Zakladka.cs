@@ -15,6 +15,12 @@ namespace WindowsFormsApp3
         public Zakladka()
         {
             InitializeComponent();
+
+            if (Form1.Language == "Английский")
+                translate(Form1.EngWords);
+            if (Form1.Language == "Русский")
+                translate(Form1.RusWords);
+
             int x = 10;
             foreach (Uchebniki uch in Form1.zakladka)
             {
@@ -33,6 +39,16 @@ namespace WindowsFormsApp3
                     //x = 10;
                 }
             }
+        }
+
+        private void translate(Dictionary<string, string> Words)
+        {
+            Text = Words["Выбранные учебники"];
+        }
+
+        private void Zakladka_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

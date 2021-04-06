@@ -17,6 +17,10 @@ namespace WindowsFormsApp3
         {
             InitializeComponent();
 
+            if (Form1.Language == "Английский")
+                translate(Form1.EngWords);
+            if (Form1.Language == "Русский")
+                translate(Form1.RusWords);
 
             foreach (Uchebniki uch1 in Form1.spisok)
             {
@@ -49,6 +53,11 @@ namespace WindowsFormsApp3
             //pictureBox2.Load("../../Resources/" + predmet + "/" + picAdress + " - темы.png");
         }
 
+        private void translate(Dictionary<string, string> Words)
+        {
+            Text = Words["Обложка и содержание"];
+        }
+
         private void FormFisica_Load(object sender, EventArgs e)
         {
 
@@ -67,7 +76,7 @@ namespace WindowsFormsApp3
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             Form1.zakladka.Add(uch);
-            MessageBox.Show("Ha! You gay!");
+            MessageBox.Show("Вы добавили учебник в избранные");
         }
     }
 }

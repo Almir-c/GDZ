@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,29 +56,31 @@ namespace WindowsFormsApp3
             IsDarkTheme = Properties.Settings.Default.IsDarkTheme;
             ApplyTheme();
 
-
+            EngWords.Add("Вернуться к списку предметов", "Go back to the list of lesson");
+            EngWords.Add("Учебники", "TextBooks");
+            EngWords.Add("Выбранные учебники", "Selected TextBooks ");
+            EngWords.Add("Обложка и содержание", "Cover and content");
+            EngWords.Add("Светлая тема", "Light theme");
             EngWords.Add("Темная тема", "Dark theme");
             EngWords.Add("Я выбрал предмет!", "I chose a lesson!");
 
+            RusWords.Add("Вернуться к списку предметов", "Вернуться к списку предметов");
+            RusWords.Add("Учебники", "Учебники");
+            RusWords.Add("Выбранные учебники", "Выбранные учебники");
+            RusWords.Add("Обложка и содержание", "Обложка и содержание");
+            RusWords.Add("Светлая тема", "Светлая тема");
             RusWords.Add("Темная тема", "Темная тема");
             RusWords.Add("Я выбрал предмет!", "Я выбрал предмет!");
 
 
 
+            string[] lines = File.ReadAllLines("../../../Учебники.txt");
+            foreach (string line in lines)
+            {
+                string[] parts = line.Split(new string[] { ", " }, StringSplitOptions.None); //
+                spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), parts[2], Convert.ToInt32(parts[3])));
+            }
 
-            spisok.Add(new Uchebniki("Перышкин", 0, "Физика", 7));
-            spisok.Add(new Uchebniki("Машкова", 0, "Русский язык", 7));
-            spisok.Add(new Uchebniki("Каленчук", 0, "Русский язык", 4));
-            spisok.Add(new Uchebniki("Гав", 0, "Мемология", 7));
-            spisok.Add(new Uchebniki("Мур", 0, "Мемология", 7));
-            spisok.Add(new Uchebniki("Виктор", 0, "Мемология", 7));
-            /*
-            spisok.Add(new Uchebniki("Абрамов", -1));
-            spisok.Add(new Uchebniki("Машкова", 100));
-            spisok.Add(new Uchebniki("Владимиров", 50));
-            spisok.Add(new Uchebniki("Anonim", 1000));
-            spisok.Add(new Uchebniki("Верблюдов", 25));
-            */
             int x = 10;
             int y = 20;
             foreach (Uchebniki uch in spisok)
@@ -127,23 +130,32 @@ namespace WindowsFormsApp3
             }
         }
 
+
+        #region Переводы
         public static Dictionary<string, string> EngWords = new Dictionary<string, string>();
         public static Dictionary<string, string> RusWords = new Dictionary<string, string>();
+        public static string Language = "Русский";
 
         void translate(Dictionary<string, string> Words)
         {
             button1.Text = Words["Я выбрал предмет!"];
-            button2.Text = Words["Темная тема"];
+            if (IsDarkTheme)
+                button2.Text = Words["Темная тема"];
+            else
+                button2.Text = Words["Светлая тема"];
         }
         private void RuButton_Click(object sender, EventArgs e)
         {
-             translate(RusWords);
+            Language = "Русский";
+            translate(RusWords);
         }
         
         private void EnButton_Click_1(object sender, EventArgs e)
         {
-             translate(EngWords);
+            Language = "Английский";
+            translate(EngWords);
         }
+        #endregion
 
 
         /*
@@ -178,24 +190,23 @@ namespace WindowsFormsApp3
         {
             if (IsDarkTheme)
             {
-                button1.BackColor = Color.FromArgb(45, 45, 48);
-                button2.BackColor = Color.FromArgb(45, 45, 48);
-                buttonForm1.BackColor = Color.FromArgb(45, 45, 48);
-              
                 BackColor = Color.FromArgb(45, 45, 48);
+              
                 ForeColor = Color.FromArgb(255, 255, 255);
                 button2.Text = "Светлая тема";
             }
             else
             {
-                button1.BackColor = Color.FromArgb(255, 255, 255);
-                button2.BackColor = Color.FromArgb(255, 255, 255);
-                buttonForm1.BackColor = Color.FromArgb(255, 255, 255);
-               
                 BackColor = Color.FromArgb(255, 255, 255);
                 ForeColor = Color.FromArgb(0, 0, 0);
                 button2.Text = "Темная тема";
             }
+
+            buttonForm1.BackColor = BackColor;
+            button1.BackColor = BackColor;
+            button2.BackColor = BackColor;
+            RuButton.BackColor = BackColor;
+            EnButton.BackColor = BackColor;
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -268,6 +279,12 @@ namespace WindowsFormsApp3
         {
             IsDarkTheme = !IsDarkTheme;
             ApplyTheme();
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Properties.Settings.Default.IsDarkTheme = IsDarkTheme;
+            Properties.Settings.Default.Save();
         }
     }
 }

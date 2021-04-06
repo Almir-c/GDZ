@@ -19,7 +19,12 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
-        
+            if (Form1.Language == "Английский")
+                translate(Form1.EngWords);
+            if (Form1.Language == "Русский")
+                translate(Form1.RusWords);
+
+
 
             int x = 10;
 
@@ -50,6 +55,11 @@ namespace WindowsFormsApp3
             pictureBox1.Load("../../Resources/" + predmet1 + ".png");
             pictureBox1.Tag = predmet;
             */
+        }
+        void translate(Dictionary<string, string> Words)
+        {
+            buttonDa.Text = Words["Вернуться к списку предметов"];
+            Text = Words["Учебники"];
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -97,6 +107,11 @@ namespace WindowsFormsApp3
         private void pictureBox3_Click(object sender, EventArgs e)
         {
             //Form1.zakladka.Add(like);
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
 
         }
     }
