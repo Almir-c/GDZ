@@ -44,6 +44,7 @@ namespace WindowsFormsApp3
             this.button2 = new System.Windows.Forms.Button();
             this.RuButton = new System.Windows.Forms.Button();
             this.EnButton = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -206,12 +207,24 @@ namespace WindowsFormsApp3
             this.EnButton.UseVisualStyleBackColor = false;
             this.EnButton.Click += new System.EventHandler(this.EnButton_Click_1);
             // 
+            // button3
+            // 
+            this.button3.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.button3.Location = new System.Drawing.Point(794, 141);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(100, 40);
+            this.button3.TabIndex = 17;
+            this.button3.Text = "Добавить";
+            this.button3.UseVisualStyleBackColor = false;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(906, 539);
+            this.Controls.Add(this.button3);
             this.Controls.Add(this.EnButton);
             this.Controls.Add(this.RuButton);
             this.Controls.Add(this.button2);
@@ -256,6 +269,7 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button RuButton;
         private System.Windows.Forms.Button EnButton;
+        private System.Windows.Forms.Button button3;
     }
 }
 

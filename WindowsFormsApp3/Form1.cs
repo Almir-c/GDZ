@@ -87,7 +87,9 @@ namespace WindowsFormsApp3
             {
                 try
                 {
-                    uch.oblojka.Load("../../Resources/" + uch.discipline + "/" + uch.schoolClass.ToString() + " класс " + uch.Author + " - обложка.jpg");
+                    uch.oblojka.Load("../../Resources/" + uch.discipline + "/" +
+                        uch.schoolClass.ToString() + " класс " + 
+                        uch.Author + " - обложка.jpg");
 
                     uch.oblojka.Location = new Point(x, y);
                     uch.oblojka.Size = new Size(120, 138);
@@ -207,6 +209,7 @@ namespace WindowsFormsApp3
             button2.BackColor = BackColor;
             RuButton.BackColor = BackColor;
             EnButton.BackColor = BackColor;
+            pictureBox1_Click(null, null);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -236,7 +239,14 @@ namespace WindowsFormsApp3
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
+            if (IsDarkTheme)
+            {
+                pictureBox1.Load("../../Resources/гдзdark.png");
+            }
+            else
+            {
             pictureBox1.Load("../../Resources/гдз.png");
+            }
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -285,6 +295,12 @@ namespace WindowsFormsApp3
         {
             Properties.Settings.Default.IsDarkTheme = IsDarkTheme;
             Properties.Settings.Default.Save();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FormNew neww = new FormNew();
+            neww.Show();
         }
     }
 }
