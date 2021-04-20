@@ -81,7 +81,7 @@ namespace WindowsFormsApp3
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { ", " }, StringSplitOptions.None); //
-                spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]), 
+                spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]),    
                     parts[3], Convert.ToInt32(parts[4])));
             }
 
@@ -98,6 +98,7 @@ namespace WindowsFormsApp3
                     uch.oblojka.Location = new Point(x, y);
                     uch.oblojka.Size = new Size(120, 138);
                     uch.oblojka.SizeMode = PictureBoxSizeMode.Zoom;
+                    uch.oblojka.Click += new EventHandler(PredmetForm.OpenUchebnik);
 
                     panel1.Controls.Add(uch.oblojka);
                     x = x + 150;
@@ -242,7 +243,7 @@ namespace WindowsFormsApp3
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
-        {
+        {  
             if (IsDarkTheme)
             {
                 pictureBox1.Load("../../Resources/гдзdark.png");
@@ -305,6 +306,20 @@ namespace WindowsFormsApp3
         {
             FormNew neww = new FormNew();
             neww.Show();
+        }
+        int startTime = 0;
+        private void яХочуДобавитьToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            button3.Visible = true;
+            startTime = Environment.TickCount;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            label1.Text = DateTime.Now.ToLongTimeString();
+            int currentTime = Environment.TickCount;
+            if (currentTime - startTime > 3000)
+                button3.Visible = false;
         }
     }
 }

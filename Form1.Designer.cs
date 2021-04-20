@@ -29,6 +29,7 @@ namespace WindowsFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.radioButtonAlgebra = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -45,8 +46,13 @@ namespace WindowsFormsApp3
             this.RuButton = new System.Windows.Forms.Button();
             this.EnButton = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.яХочуДобавитьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // radioButtonAlgebra
@@ -127,7 +133,7 @@ namespace WindowsFormsApp3
             // 
             this.buttonForm1.Location = new System.Drawing.Point(819, 332);
             this.buttonForm1.Name = "buttonForm1";
-            this.buttonForm1.Size = new System.Drawing.Size(75, 23);
+            this.buttonForm1.Size = new System.Drawing.Size(80, 23);
             this.buttonForm1.TabIndex = 10;
             this.buttonForm1.Text = "Выбрать";
             this.buttonForm1.UseVisualStyleBackColor = true;
@@ -216,7 +222,38 @@ namespace WindowsFormsApp3
             this.button3.TabIndex = 17;
             this.button3.Text = "Добавить";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.яХочуДобавитьToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(253, 28);
+            // 
+            // яХочуДобавитьToolStripMenuItem
+            // 
+            this.яХочуДобавитьToolStripMenuItem.Name = "яХочуДобавитьToolStripMenuItem";
+            this.яХочуДобавитьToolStripMenuItem.Size = new System.Drawing.Size(252, 24);
+            this.яХочуДобавитьToolStripMenuItem.Text = "Я хочу добавить учебник";
+            this.яХочуДобавитьToolStripMenuItem.Click += new System.EventHandler(this.яХочуДобавитьToolStripMenuItem_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.label1.Location = new System.Drawing.Point(782, 467);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.TabIndex = 19;
+            this.label1.Text = "label1";
             // 
             // Form1
             // 
@@ -224,6 +261,8 @@ namespace WindowsFormsApp3
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.ClientSize = new System.Drawing.Size(906, 539);
+            this.ContextMenuStrip = this.contextMenuStrip1;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.EnButton);
             this.Controls.Add(this.RuButton);
@@ -247,6 +286,7 @@ namespace WindowsFormsApp3
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -270,6 +310,10 @@ namespace WindowsFormsApp3
         private System.Windows.Forms.Button RuButton;
         private System.Windows.Forms.Button EnButton;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem яХочуДобавитьToolStripMenuItem;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 

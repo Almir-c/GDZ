@@ -29,7 +29,9 @@ namespace WindowsFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.buttonDa = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // buttonDa
@@ -41,6 +43,11 @@ namespace WindowsFormsApp3
             this.buttonDa.Text = "Вернуться к списку предметов";
             this.buttonDa.UseVisualStyleBackColor = true;
             this.buttonDa.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // PredmetForm
             // 
@@ -58,5 +65,6 @@ namespace WindowsFormsApp3
 
         #endregion
         private System.Windows.Forms.Button buttonDa;
+        private System.Windows.Forms.Timer timer1;
     }
 }

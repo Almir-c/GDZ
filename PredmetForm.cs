@@ -82,7 +82,6 @@ namespace WindowsFormsApp3
                 /// Ищем нужный учебник
                 if (((PictureBox)sender).Image == uch.oblojka.Image)
                 {
-
                     UchebnikForm fisica2 = new UchebnikForm(uch.discipline, uch.schoolClass.ToString(), uch.Author);
                     fisica2.Show();
                     break;
@@ -113,6 +112,15 @@ namespace WindowsFormsApp3
         private void label1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+
+            if (Form1.Language == "Английский")
+                translate(Form1.EngWords);
+            if (Form1.Language == "Русский")
+                translate(Form1.RusWords);
         }
     }
 }

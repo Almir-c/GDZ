@@ -22,6 +22,8 @@ namespace WindowsFormsApp3
             if (Form1.Language == "Русский")
                 translate(Form1.RusWords);
 
+            Text = predmet + " (" + author + ", " + schoolClass + " класс)";
+
             foreach (Uchebniki uch1 in Form1.spisok)
             {
                 /// Ищем нужный учебник
@@ -38,7 +40,6 @@ namespace WindowsFormsApp3
                         pic.BackgroundImageLayout = ImageLayout.Zoom;
                         pic.Location = new Point(100 + 50 * i, 320);
                         pic.Size = new Size(50, 50);
-                        pic.Click += ;
                         Controls.Add(pic);
                     }
                     break;
