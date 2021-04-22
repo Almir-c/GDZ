@@ -91,11 +91,7 @@ namespace WindowsFormsApp3
 
         private void pictureBox1_Click_1(object sender, EventArgs e)
         {
-            //if (predmet == "Русский язык")
-            {
-                //UchebnikForm fisica = new UchebnikForm(predmet, pictureBox1.Tag.ToString());
-                //fisica.Show();
-            }
+            
         }
 
         private void PredmetForm_Load(object sender, EventArgs e)
@@ -105,7 +101,7 @@ namespace WindowsFormsApp3
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            //Form1.zakladka.Add(like);
+            
 
         }
 

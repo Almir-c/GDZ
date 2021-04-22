@@ -320,6 +320,16 @@ namespace WindowsFormsApp3
             int currentTime = Environment.TickCount;
             if (currentTime - startTime > 3000)
                 button3.Visible = false;
+
+            label2.Visible = (hiForm.Login == "Admin");
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+            if (label2.Visible == (hiForm.Login == "Admin"))
+            {
+                button4.Visible = true;
+            }
         }
     }
 }
