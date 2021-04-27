@@ -21,13 +21,15 @@ namespace WindowsFormsApp3
         public string discipline;
         public int schoolClass;
         public int YourIq; 
-        public int Rating; 
+        public int Rating;
+        public string link;
 
-        public Uchebniki(string _Author, int _YourIq, int _Rating, string _discipline, int _schoolClass)
+        public Uchebniki(string _Author, int _YourIq, int _Rating, string _discipline, int _schoolClass, string _link)
         {
             Author = _Author;
             YourIq = _YourIq;
             Rating = _Rating;
+            link = _link;
             oblojka = new PictureBox();
             soderzanie = new PictureBox();
             soderzanie2 = new PictureBox();
@@ -60,6 +62,7 @@ namespace WindowsFormsApp3
             ApplyTheme();
 
             EngWords.Add("Вернуться к списку предметов", "Go back to the list of lesson");
+            EngWords.Add("Скачать учебник", "Download to book");
             EngWords.Add("Учебники", "TextBooks");
             EngWords.Add("Выбранные учебники", "Selected TextBooks ");
             EngWords.Add("Обложка и содержание", "Cover and content");
@@ -68,6 +71,7 @@ namespace WindowsFormsApp3
             EngWords.Add("Я выбрал предмет!", "I chose a lesson!");
 
             RusWords.Add("Вернуться к списку предметов", "Вернуться к списку предметов");
+            RusWords.Add("Скачать учебник", "Скачать учебник");
             RusWords.Add("Учебники", "Учебники");
             RusWords.Add("Выбранные учебники", "Выбранные учебники");
             RusWords.Add("Обложка и содержание", "Обложка и содержание");
@@ -81,8 +85,13 @@ namespace WindowsFormsApp3
             foreach (string line in lines)
             {
                 string[] parts = line.Split(new string[] { ", " }, StringSplitOptions.None); //
-                spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]),    
-                    parts[3], Convert.ToInt32(parts[4])));
+
+                if (parts.Length > 5)
+                    spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]),
+                        parts[3], Convert.ToInt32(parts[4]), parts[5]));
+                else if (parts.Length > 4)
+                    spisok.Add(new Uchebniki(parts[0], Convert.ToInt32(parts[1]), Convert.ToInt32(parts[2]),
+                        parts[3], Convert.ToInt32(parts[4]), ""));
             }
 
             int x = 10;

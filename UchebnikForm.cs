@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -31,6 +32,9 @@ namespace WindowsFormsApp3
                     author == uch1.Author)
                 {
                     uch = uch1;
+
+                    if (uch.link == "")
+                        button2.Visible = false;
 
                     //Рейтинг
                     for (int i = 0; i < uch.Rating; i++)
@@ -100,6 +104,13 @@ namespace WindowsFormsApp3
         private void button1_Click(object sender, EventArgs e)
         {
             uch.Rating = Convert.ToInt32(textBox1.Text);
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            WebClient link = new WebClient();
+            link.DownloadFileAsync(new Uri(uch.link), "1.pdf");
+            MessageBox.Show("Сохранено");
         }
     }
 }

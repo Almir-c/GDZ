@@ -27,7 +27,7 @@ namespace WindowsFormsApp3
         {
             File.AppendAllText("../../../Учебники.txt",
                 Environment.NewLine +
-                textBox1.Text + ", 0, 1, " + comboBox1.Text + ", 7");
+                textBox1.Text + ", 0, 1, " + comboBox1.Text + ", 7, ");
             MessageBox.Show("Вы добавили новый учебник");
 
             if (adress != "")
