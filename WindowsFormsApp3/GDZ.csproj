@@ -58,11 +58,23 @@
     <Compile Include="FormNew.Designer.cs">
       <DependentUpon>FormNew.cs</DependentUpon>
     </Compile>
+    <Compile Include="hiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="hiForm.Designer.cs">
+      <DependentUpon>hiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="PredmetForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="PredmetForm.Designer.cs">
       <DependentUpon>PredmetForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UchebControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UchebControl.Designer.cs">
+      <DependentUpon>UchebControl.cs</DependentUpon>
     </Compile>
     <Compile Include="UchebnikForm.cs">
       <SubType>Form</SubType>
@@ -80,6 +92,12 @@
     </Compile>
     <EmbeddedResource Include="FormNew.resx">
       <DependentUpon>FormNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="hiForm.resx">
+      <DependentUpon>hiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UchebControl.resx">
+      <DependentUpon>UchebControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UchebnikForm.resx">
       <DependentUpon>UchebnikForm.cs</DependentUpon>
@@ -133,6 +151,18 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\star3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\крест.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Anonim.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\welcom.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
