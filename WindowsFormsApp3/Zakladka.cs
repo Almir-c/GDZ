@@ -62,13 +62,24 @@ namespace WindowsFormsApp3
             m.Subject = "Тест";
             // текст письма
             m.Body = "Ваши любимые deep dark fantasies";
-            File.WriteAllText("Ucheb.csv","Автор,Предмет");
+            File.WriteAllText("Ucheb.csv","Автор,Предмет,Рейтинг");
             foreach (Uchebniki uch in Form1.zakladka)
             {
                 File.AppendAllText("Ucheb.csv",
                     Environment.NewLine +
-                    uch.Author + "," + uch.discipline);
+                    uch.Author + "," + uch.discipline+"," + uch.Rating.ToString());
+
+               /* Attachment attachment = new Attachment("../../Resources/" + uch.discipline + "/" +
+                        uch.schoolClass.ToString() + " класс " +
+                        uch.Author + " - обложка.jpg");
+                attachment.Name = uch.Author + " - обложка.jpg";
+
+                m.Attachments.Add(attachment);*/
             }
+
+            Attachment attachment = new Attachment("../../Resources/ven.jpg");
+            attachment.Name = "ven.jpg";   // либо обложки, либо Ven
+            m.Attachments.Add(attachment);
 
             m.Attachments.Add(new Attachment("Ucheb.csv"));
             // письмо представляет код html
