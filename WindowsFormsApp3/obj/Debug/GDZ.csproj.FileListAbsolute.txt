@@ -30,3 +30,20 @@ C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\GDZ.csproj.CoreCompileInputs.cache
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
 C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb
+D:\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe.config
+D:\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.exe
+D:\GDZ-main\WindowsFormsApp3\bin\Debug\WindowsFormsApp3.pdb
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\GDZ.csprojAssemblyReference.cache
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.FormNew.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.hiForm.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.UchebControl.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.UchebnikForm.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.PredmetForm.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Form1.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Properties.Resources.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.Zakladka.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ZvyazForm.resources
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\GDZ.csproj.GenerateResource.cache
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\GDZ.csproj.CoreCompileInputs.cache
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.exe
+D:\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.pdb

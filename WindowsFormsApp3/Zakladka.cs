@@ -52,15 +52,10 @@ namespace WindowsFormsApp3
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // отправитель - устанавливаем адрес и отображаемое в письме имя
             MailAddress from = new MailAddress("mikki.abrams1234567890@gmail.com", "Училка");
-            // кому отправляем
             MailAddress to = new MailAddress("beavisabra@yandex.ru");
-            // создаем объект сообщения
             MailMessage m = new MailMessage(from, to);
-            // тема письма
             m.Subject = "Тест";
-            // текст письма
             m.Body = "Ваши любимые deep dark fantasies";
             File.WriteAllText("Ucheb.csv","Автор,Предмет,Рейтинг");
             foreach (Uchebniki uch in Form1.zakladka)
@@ -82,11 +77,8 @@ namespace WindowsFormsApp3
             m.Attachments.Add(attachment);
 
             m.Attachments.Add(new Attachment("Ucheb.csv"));
-            // письмо представляет код html
             m.IsBodyHtml = true;
-            // адрес smtp-сервера и порт, с которого будем отправлять письмо
             SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
-            // логин и пароль
             smtp.Credentials = new NetworkCredential(from.Address, "Beavis123");
             smtp.EnableSsl = true;
             smtp.Send(m);

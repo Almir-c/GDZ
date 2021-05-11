@@ -90,6 +90,12 @@
     <Compile Include="Zakladka.Designer.cs">
       <DependentUpon>Zakladka.cs</DependentUpon>
     </Compile>
+    <Compile Include="ZvyazForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZvyazForm.Designer.cs">
+      <DependentUpon>ZvyazForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FormNew.resx">
       <DependentUpon>FormNew.cs</DependentUpon>
     </EmbeddedResource>
@@ -120,6 +126,9 @@
     </Compile>
     <EmbeddedResource Include="Zakladka.resx">
       <DependentUpon>Zakladka.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZvyazForm.resx">
+      <DependentUpon>ZvyazForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
