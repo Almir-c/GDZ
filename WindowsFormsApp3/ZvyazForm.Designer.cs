@@ -29,6 +29,7 @@ namespace WindowsFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ZvyazForm));
             this.otprbutton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.TemBox = new System.Windows.Forms.ComboBox();
@@ -152,6 +153,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.TemBox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.otprbutton);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ZvyazForm";
             this.Text = "Обратная связь";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

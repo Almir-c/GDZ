@@ -30,6 +30,7 @@ namespace WindowsFormsApp3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.radioButtonAlgebra = new System.Windows.Forms.RadioButton();
             this.radioButton2 = new System.Windows.Forms.RadioButton();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -125,7 +126,7 @@ namespace WindowsFormsApp3
             // 
             // textBoxForm1
             // 
-            this.textBoxForm1.Location = new System.Drawing.Point(794, 379);
+            this.textBoxForm1.Location = new System.Drawing.Point(794, 330);
             this.textBoxForm1.Name = "textBoxForm1";
             this.textBoxForm1.Size = new System.Drawing.Size(100, 22);
             this.textBoxForm1.TabIndex = 9;
@@ -133,11 +134,11 @@ namespace WindowsFormsApp3
             // 
             // buttonForm1
             // 
-            this.buttonForm1.Location = new System.Drawing.Point(819, 332);
+            this.buttonForm1.Location = new System.Drawing.Point(794, 292);
             this.buttonForm1.Name = "buttonForm1";
             this.buttonForm1.Size = new System.Drawing.Size(80, 23);
             this.buttonForm1.TabIndex = 10;
-            this.buttonForm1.Text = "Выбрать";
+            this.buttonForm1.Text = "Найти";
             this.buttonForm1.UseVisualStyleBackColor = true;
             this.buttonForm1.Click += new System.EventHandler(this.buttonForm1_Click);
             // 
@@ -277,6 +278,7 @@ namespace WindowsFormsApp3
             this.button4.Text = "эхехе";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Visible = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // Form1
             // 
@@ -305,6 +307,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.radioButtonAlgebra);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.Color.Black;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = " ";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);

@@ -29,6 +29,7 @@ namespace WindowsFormsApp3
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UchebnikForm));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
@@ -116,6 +117,7 @@ namespace WindowsFormsApp3
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "UchebnikForm";
             this.Text = "Обложка и содержание";
             this.Load += new System.EventHandler(this.FormFisica_Load);

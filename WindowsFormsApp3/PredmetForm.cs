@@ -19,6 +19,9 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
+
+            Text = "Учебники по предмету " + predmet;
+
             if (Form1.Language == "Английский")
                 translate(Form1.EngWords);
             if (Form1.Language == "Русский")
@@ -37,13 +40,13 @@ namespace WindowsFormsApp3
                     //Добавляем картинку
                     PictureBox oblojka = new PictureBox();
                     oblojka.Image = uch.oblojka.Image;
-                    oblojka.Location = new Point(x, 150);
+                    oblojka.Location = new Point(x, 10);
                     oblojka.Size = new Size(120, 138);
                     oblojka.SizeMode = PictureBoxSizeMode.Zoom;
                     oblojka.Click += new EventHandler(OpenUchebnik);
-                    Controls.Add(oblojka);
+                    panel1.Controls.Add(oblojka);
                     x = x + 150;
-                    if (x + 120 > Width)
+                    if (x + 120 > panel1.Width)
                     {
                         //y = y + 180;
                         //x = 10;
@@ -117,6 +120,11 @@ namespace WindowsFormsApp3
                 translate(Form1.EngWords);
             if (Form1.Language == "Русский")
                 translate(Form1.RusWords);
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

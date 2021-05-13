@@ -30,8 +30,10 @@ namespace WindowsFormsApp3
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PredmetForm));
             this.buttonDa = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
             this.SuspendLayout();
             // 
             // buttonDa
@@ -49,13 +51,26 @@ namespace WindowsFormsApp3
             this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // panel1
+            // 
+            this.panel1.AutoScroll = true;
+            this.panel1.Location = new System.Drawing.Point(12, 151);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(486, 287);
+            this.panel1.TabIndex = 4;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            // 
             // PredmetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.BackgroundImage = global::WindowsFormsApp3.Properties.Resources.фон;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(695, 450);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonDa);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PredmetForm";
             this.Text = "Учебник";
             this.Load += new System.EventHandler(this.PredmetForm_Load);
@@ -66,5 +81,6 @@ namespace WindowsFormsApp3
         #endregion
         private System.Windows.Forms.Button buttonDa;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
