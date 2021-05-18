@@ -23,8 +23,6 @@ namespace WindowsFormsApp3
             if (Form1.Language == "Русский")
                 translate(Form1.RusWords);
 
-            Text = predmet + " (" + author + ", " + schoolClass + " класс)";
-
             foreach (Uchebniki uch1 in Form1.spisok)
             {
                 /// Ищем нужный учебник
@@ -32,22 +30,43 @@ namespace WindowsFormsApp3
                     author == uch1.Author)
                 {
                     uch = uch1;
-
-                    if (uch.link == "")
-                        button2.Visible = false;
-
-                    //Рейтинг
-                    for (int i = 0; i < uch.Rating; i++)
-                    {
-                        PictureBox pic = new PictureBox();
-                        pic.BackgroundImage = Properties.Resources.star3;
-                        pic.BackgroundImageLayout = ImageLayout.Zoom;
-                        pic.Location = new Point(100 + 50 * i, 320);
-                        pic.Size = new Size(50, 50);
-                        Controls.Add(pic);
-                    }
                     break;
                 }
+            }
+
+            Text = predmet + " (" + author + ", " + schoolClass + " класс)";
+
+            f1(predmet, schoolClass, author);
+        }
+        void f1(string predmet, string schoolClass, string author)
+        {
+            panel1.Controls.Clear();
+
+            if (uch.link == "")
+                button2.Visible = false;
+
+            //Рейтинг
+            for (int i = 0; i < uch.Rating; i++)
+            {
+                PictureBox pic = new PictureBox();
+                pic.BackgroundImage = Properties.Resources.star3;
+                pic.Click += new EventHandler(OpenUchebnik);
+                pic.BackgroundImageLayout = ImageLayout.Zoom;
+                pic.Location = new Point(50 * i, 20);
+                pic.Size = new Size(50, 50);
+                panel1.Controls.Add(pic);
+                pic.Tag = (i + 1);
+            }
+            for (int i = uch.Rating; i<8;  i++)
+            {
+                PictureBox pic = new PictureBox();
+                pic.BackgroundImage = Properties.Resources.falsestar3;
+                pic.BackgroundImageLayout = ImageLayout.Zoom;
+                pic.Click += new EventHandler(OpenUchebnik);
+                pic.Location = new Point(50 * i, 20);
+                pic.Size = new Size(50, 50);
+                panel1.Controls.Add(pic);
+                pic.Tag = (i + 1);
             }
 
 
@@ -70,6 +89,15 @@ namespace WindowsFormsApp3
             //pictureBox2.Load("../../Resources/" + predmet + "/" + picAdress + " - темы.png");
         }
 
+
+
+        public void OpenUchebnik(object sender, EventArgs e)
+        {
+            int rate1 = Convert.ToInt32(((PictureBox)sender).Tag.ToString());
+            uch.Rating = rate1;
+            f1(uch.discipline, uch.schoolClass.ToString(), uch.Author);
+            MessageBox.Show("Изменено");
+        }
         private void translate(Dictionary<string, string> Words)
         {
             Text = Words["Обложка и содержание"];

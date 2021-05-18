@@ -43,7 +43,7 @@ namespace WindowsFormsApp3
                     oblojka.Location = new Point(x, 10);
                     oblojka.Size = new Size(120, 138);
                     oblojka.SizeMode = PictureBoxSizeMode.Zoom;
-                    oblojka.Click += new EventHandler(OpenUchebnik);
+                    oblojka.Click += new EventHandler(OpenUchebnik);//
                     panel1.Controls.Add(oblojka);
                     x = x + 150;
                     if (x + 120 > panel1.Width)
