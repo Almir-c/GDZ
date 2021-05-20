@@ -17,6 +17,19 @@ namespace WindowsFormsApp3
         public UchebnikForm(string predmet, string schoolClass, string author)
         {
             InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
 
             if (Form1.Language == "Английский")
                 translate(Form1.EngWords);

@@ -17,6 +17,19 @@ namespace WindowsFormsApp3
         public hiForm()
         {
             InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
             Users = new List<string>();
             Users.Add("Admin"); Users.Add("228337");
             Users.Add(""); Users.Add("");

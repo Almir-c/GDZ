@@ -61,6 +61,7 @@ namespace WindowsFormsApp3
             IsDarkTheme = Properties.Settings.Default.IsDarkTheme;
             ApplyTheme();
 
+
             EngWords.Add("Вернуться к списку предметов", "Go back to the list of lesson");
             EngWords.Add("Скачать учебник", "Download to book");
             EngWords.Add("Учебники", "TextBooks");
@@ -110,8 +111,8 @@ namespace WindowsFormsApp3
                     uch.oblojka.Click += new EventHandler(PredmetForm.OpenUchebnik);
 
                     panel1.Controls.Add(uch.oblojka);
-                    x = x + 150;
-                    if (x + 120 > Width)
+                    x = x + 140;
+                    if (x + 140 > panel1.Width)
                     {
                         y = y + 180;
                         x = 10;
@@ -343,7 +344,16 @@ namespace WindowsFormsApp3
 
         private void button4_Click(object sender, EventArgs e)
         {
+            VenForm ven = new VenForm();
+            ven.Visible = true;
 
+            System.Diagnostics.Process.Start("https://youtu.be/c9JNp6kdKqU");
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            ZvyazForm zvyaz = new ZvyazForm();
+            zvyaz.Visible = true;
         }
     }
 }

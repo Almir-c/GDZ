@@ -18,6 +18,19 @@ namespace WindowsFormsApp3
         public Zakladka()
         {
             InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
 
             if (Form1.Language == "Английский")
                 translate(Form1.EngWords);
@@ -64,17 +77,17 @@ namespace WindowsFormsApp3
                     Environment.NewLine +
                     uch.Author + "," + uch.discipline+"," + uch.Rating.ToString());
 
-               /* Attachment attachment = new Attachment("../../Resources/" + uch.discipline + "/" +
+                Attachment attachment = new Attachment("../../Resources/" + uch.discipline + "/" +
                         uch.schoolClass.ToString() + " класс " +
                         uch.Author + " - обложка.jpg");
                 attachment.Name = uch.Author + " - обложка.jpg";
 
-                m.Attachments.Add(attachment);*/
+                m.Attachments.Add(attachment);
             }
 
-            Attachment attachment = new Attachment("../../Resources/ven.jpg");
+           /* Attachment attachment = new Attachment("../../Resources/ven.jpg");
             attachment.Name = "ven.jpg";   // либо обложки, либо Ven
-            m.Attachments.Add(attachment);
+            m.Attachments.Add(attachment);*/
 
             m.Attachments.Add(new Attachment("Ucheb.csv"));
             m.IsBodyHtml = true;

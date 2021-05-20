@@ -18,6 +18,19 @@ namespace WindowsFormsApp3
         {
             uch1 = uch;
             InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
             pictureBox1.Image = uch.oblojka.Image;
             label1.Text = "Автор: " + uch.Author + " Класс: " + uch.YourIq;
             pictureBox1.Click += new EventHandler(PredmetForm.OpenUchebnik);

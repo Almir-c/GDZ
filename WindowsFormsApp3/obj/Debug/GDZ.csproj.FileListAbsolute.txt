@@ -82,3 +82,4 @@ C:\Users\user\Downloads\GDZ-main (6)\GDZ-main\WindowsFormsApp3\obj\Debug\Windows
 C:\Users\user\Downloads\GDZ-main (6)\GDZ-main\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.ZvyazForm.resources
 C:\Users\user\Downloads\GDZ-main (6)\GDZ-main\WindowsFormsApp3\obj\Debug\GDZ.csproj.GenerateResource.cache
 C:\Users\user\Downloads\GDZ-main (6)\GDZ-main\WindowsFormsApp3\obj\Debug\GDZ.csproj.CoreCompileInputs.cache
+C:\Users\beavi\Downloads\git\2 год\GDZ\WindowsFormsApp3\obj\Debug\WindowsFormsApp3.VenForm.resources

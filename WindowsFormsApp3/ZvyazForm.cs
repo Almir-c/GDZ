@@ -18,6 +18,19 @@ namespace WindowsFormsApp3
         public ZvyazForm()
         {
             InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
         }
 
         private void TemBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -75,6 +88,11 @@ namespace WindowsFormsApp3
                 adress = openFileDialog1.FileName;
                 pictureBox1.Load(adress);
             }
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -19,6 +19,20 @@ namespace WindowsFormsApp3
             predmet = predmet1;
             InitializeComponent();
 
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
+
 
             Text = "Учебники по предмету " + predmet;
 
@@ -30,6 +44,7 @@ namespace WindowsFormsApp3
 
 
             int x = 10;
+            int y = 10;
 
             //Бегаем по всем учебникам
             foreach (Uchebniki uch in Form1.spisok)
@@ -40,16 +55,16 @@ namespace WindowsFormsApp3
                     //Добавляем картинку
                     PictureBox oblojka = new PictureBox();
                     oblojka.Image = uch.oblojka.Image;
-                    oblojka.Location = new Point(x, 10);
+                    oblojka.Location = new Point(x, y);
                     oblojka.Size = new Size(120, 138);
                     oblojka.SizeMode = PictureBoxSizeMode.Zoom;
                     oblojka.Click += new EventHandler(OpenUchebnik);//
                     panel1.Controls.Add(oblojka);
                     x = x + 150;
-                    if (x + 120 > panel1.Width)
+                    if (x + 150 > panel1.Width)
                     {
-                        //y = y + 180;
-                        //x = 10;
+                        y = y + 180;
+                        x = 10;
                     }
                 }
             }

@@ -15,7 +15,20 @@ namespace WindowsFormsApp3
     {
         public FormNew()
         {
-            InitializeComponent();  
+            InitializeComponent();
+            if (Form1.IsDarkTheme)
+            {
+                BackColor = Color.FromArgb(45, 45, 48);
+
+                ForeColor = Color.FromArgb(255, 255, 255);
+
+            }
+            else
+            {
+                BackColor = Color.FromArgb(255, 255, 255);
+                ForeColor = Color.FromArgb(0, 0, 0);
+
+            }
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
